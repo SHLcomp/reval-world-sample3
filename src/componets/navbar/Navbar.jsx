@@ -19,8 +19,11 @@ const Navbar = () => {
       case "/reval-world-sample3/":
         setMenu("Home");
         break;
-      case "/reval-world-sample3/UPVC":
+      case "/reval-world-sample3/upvc":
         setMenu("UPVC");
+        break;
+      case '/reval-world-sample3/epd':
+        setMenu("Projects");
         break;
     }
   });
@@ -41,7 +44,7 @@ const Navbar = () => {
           <Link className="a" to={"/reval-world-sample3/"}>
             <li className={menu === "Home" ? "clicked" : ""}>Home</li>
           </Link>
-          <li className={menu === "UPVC" ? "clicked" : ""}>UPVC</li>
+          <Link className="a" to='/reval-world-sample3/upvc'><li className={menu === "UPVC" ? "clicked" : ""}>UPVC</li></Link>
           <li className={menu === "Services" ? "clicked" : ""}>Services</li>
           <li className={menu === "Projects" ? "clicked" : ""}>Projects</li>
           <li className={menu === "Colors" ? "clicked" : ""}>Colors</li>

@@ -31,3 +31,16 @@
   text-decoration: none;
   list-style: none;
 }
+.cta{
+      color: white;
+      background: var(--second-color-2);
+      display: inline-flex;
+      justify-content: center;
+      padding: 10px 20px;
+      margin-top: 10px;
+      cursor: pointer;
+      font-size: clamp(0.9rem, 2vw, 1.1rem);
+      border-radius: 6px;
+      width: fit-content;
+      min-width: 90px;
+    }

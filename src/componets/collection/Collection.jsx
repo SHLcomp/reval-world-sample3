@@ -22,8 +22,8 @@ const Collection = () => {
     })}
 
     <div className="collection box2">
-        <p>Explore at Fobish</p>
-        <h1>Our <span>Worldwide</span> Collections</h1>
+        <p>Explore at Reval</p>
+        <h1>Our <span>Worldwide</span> Services</h1>
       </div>
 
 

@@ -1,5 +1,6 @@
 import './NewestProduct.scss';
-import img from '../../assets/bg4.jpg';
+import img from '../../assets/epd/epd4.jpg';
+import { Link } from 'react-router-dom';
 
 const NewestProduct = () => {
   return (
@@ -10,22 +11,20 @@ const NewestProduct = () => {
       </div>
 
     <div className="product-info">
-      <p>Fobish Newest Product</p>
-      <h1>Deeply Nourishing Face Serum For Glowing & Healthy Skin</h1>
-      <p>Lorem ipsum dolor sit amet consectetur 
-        adipisicing elit. Velit, esse? Cum necessitatibus 
-        eaque aperiam ad minima sint, obcaecati temporibus 
-        eius dolore expedita debitis quo eos facere. Placeat 
-        recusandae reprehenderit illo.</p>
+      <p>Reval Product Declaration</p>
+      <h1>Enviromental Product Declaration</h1>
+      <p>In accordance with ISO14025 and EN15804 for white PVC profiles for Windows and doors</p>
+      {/* <br /> */}
+      <p>The enviromental impacts of this product have been assessed over its <span>whole life cycle</span>. Enviromental product declaration has been <span>verified by an independent third party.</span></p>
         <div className="des">
           <ul>
-            <li><i className="fa-solid fa-leaf"></i> 100% Vegan</li>
-            <li><i className="fa-solid fa-circle-xmark"></i> Fragrance Free</li>
-            <li><i className="fa-solid fa-vial"></i> Allergy Tested</li>
-            <li><i className="fa-solid fa-seedling"></i> 100% Natural</li>
+            <li><i className="fa-solid fa-leaf"></i> Healthier Living Environment</li>
+            <li><i className="fa-solid fa-circle-xmark"></i> Energy Savings</li>
+            <li><i className="fa-solid fa-vial"></i> Proven Durability</li>
+            <li><i className="fa-solid fa-seedling"></i> Eco-Friendly Choice</li>
           </ul>
         </div>
-        <h4>View</h4>
+        <Link className='a' to='/reval-world-sample3/epd'><h4 className='cta'>View</h4></Link>
     </div>
     </div>
   )
