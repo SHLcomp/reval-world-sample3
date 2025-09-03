@@ -1,9 +1,11 @@
 import React from 'react'
 import Navbar from '../componets/navbar/Navbar';
+import Banner from '../componets/banner/Banner';
 
 export const Epd = () => {
   return (
     <div>
+        <Banner />
         <Navbar />
         {/* 
         detailed information about EPD {
