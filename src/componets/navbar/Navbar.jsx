@@ -16,10 +16,10 @@ const Navbar = () => {
 
   useEffect(() => {
     switch (locate.pathname) {
-      case "/":
+      case "/reval-world-sample3/":
         setMenu("Home");
         break;
-      case "/UPVC":
+      case "/reval-world-sample3/UPVC":
         setMenu("UPVC");
         break;
     }
@@ -38,7 +38,7 @@ const Navbar = () => {
 
 
         <ul className={`{ ${respoMenu ? "show" : ""} }`}>
-          <Link className="a" to={"/"}>
+          <Link className="a" to={"/reval-world-sample3/"}>
             <li className={menu === "Home" ? "clicked" : ""}>Home</li>
           </Link>
           <li className={menu === "UPVC" ? "clicked" : ""}>UPVC</li>

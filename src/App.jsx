@@ -4,7 +4,7 @@ import Home from './pages/home/Home.jsx'
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/reval-world-sample3/",
     element: <Home />,
     errorElement: <h1>Sorry, 404</h1>
   }
