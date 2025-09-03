@@ -26,14 +26,15 @@ import { Link } from 'react-router-dom';
          onFilter={handleFilter}
        />
 
-       <div className="products">
-         {items.map((item, i) => (
+       <div className="products"> 
+         {items.map((props) => (
            <Product 
-             key={i} 
-             cat={item.cat} 
-             img={item.img} 
-             title={item.displayName} 
-             price={item.price} 
+             id={props.id}
+             cat={props.cat} 
+            //  des={props.des}
+             img={props.img} 
+             title={props.displayName} 
+             price={props.price} 
            />
          ))}
        </div>

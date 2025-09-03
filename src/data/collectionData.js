@@ -8,32 +8,37 @@ const collection = [
         name: "Automatic Doors",
         path: "/autoDoors",
         img: img2,
-        className: "box1"
+        className: "box1",
+        cat: "door"
     },
     {
-        name: "Automatic Doors",
+        name: "Automatic Windows",
         path: "/autoDoors",
         img: img1,
         className: "box3",
+        cat: "window"
         
     },
     {
         name: "Aluminum Windows",
         path: "/autoDoors",
         img: img3,
-        className: "box"
+        className: "box",
+        cat: "window"
     },
     {
         name: "Automatic Doors",
         path: "/autoDoors",
         img: img4,
-        className: "box"
+        className: "box",
+        cat: "door"
     },
     {
         name: "Automatic Doors",
         path: "/autoDoors",
         img: img2,
-        className: "box"
+        className: "box",
+        cat: "door"
     }
 
 ]

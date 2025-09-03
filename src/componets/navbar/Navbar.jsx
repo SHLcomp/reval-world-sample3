@@ -4,7 +4,7 @@ import logo from "../../assets/vecteezy_demolition-destruction-demolishing_21553
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [menu, setMenu] = useState("Home");
   const [respoMenu, setRespoMenu] = useState(false)
 
@@ -28,6 +28,8 @@ const Navbar = () => {
       case '/reval-world-sample3/services':
         setMenu("Services");
         break;
+      case `/reval-world-sample3/product/${props.cat}`:
+        setMenu("Services")
     }
   });
   return (

@@ -12,7 +12,7 @@ const Collection = () => {
       
     {data.map((item)=>{
       return(
-        <Link className='a' to={item.path}>
+        <Link className='a' to={`/reval-world-sample3/product/${item.cat}`}>
         <div className={`collection box ${item.className}`}>
         <img src={item.img} alt="" />
         <h3 className='cta'>{item.name}</h3>

@@ -4,6 +4,8 @@ import Home from "./pages/Home.jsx";
 import Epd from "./pages/Epd.jsx";
 import Upvc from "./pages/Upvc.jsx";
 import Services from "./pages/Services.jsx";
+import ProductFilter from "./componets/poductFilter/ProductFilter.jsx";
+import { AllCat } from "./componets/allCat/AllCat.jsx";
 
 const router = createBrowserRouter([
   {
@@ -21,8 +23,26 @@ const router = createBrowserRouter([
   },
   {
     path: "/reval-world-sample3/services",
-    element: <Services />
+    element: <Services />,
   },
+  {
+    path: "/reval-world-sample3/product/",
+    element: <ProductFilter />,
+    children: [
+      {
+        path: ":productId",
+        element: <ProductFilter />,
+      },
+    ],
+  },
+  {
+    path:'/reval-world-sample3/product/door',
+    element: <AllCat cat="door"/>
+  },
+  {
+    path:'/reval-world-sample3/product/window',
+    element: <AllCat cat="window"/>
+  }
 ]);
 
 function App() {

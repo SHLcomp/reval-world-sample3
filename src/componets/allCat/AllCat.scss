@@ -1,0 +1,8 @@
+.all-cat {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    top: clamp(2cm, 3cm, 4cm);
+    flex-wrap: wrap;
+}
