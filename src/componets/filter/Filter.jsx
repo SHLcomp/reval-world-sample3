@@ -12,7 +12,7 @@ const Filter = ({ filterItems, onFilter }) => {
 
   return (
     <div className="filter">
-      <h1>Beauty Care Product</h1>
+      <h1><span>Reval </span> Products</h1>
       <ul>
         <li 
           onClick={() => handleClick('all')} 

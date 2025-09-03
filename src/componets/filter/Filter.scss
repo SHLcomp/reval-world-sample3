@@ -11,13 +11,14 @@
       li{
         cursor: pointer;
         color: var(--main-color);
-        transition: .5s;
+        transition: .2s;
         &:hover{
-          color: var(--second-color);
+          color: var(--main-color);
         }
       }
       .tag{
-        color: var(--second-color);
+        color: black;
+        
       }
       .tag.active {
         font-weight: bold;

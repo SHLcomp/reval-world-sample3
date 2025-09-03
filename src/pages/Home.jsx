@@ -6,7 +6,7 @@ import Collection from "../componets/collection/Collection";
 // import Latest from "../../componets/latest/Latest";
 import NewestProduct from "../componets/newestProduct/NewestProduct";
 import OtherProduct from "../componets/otherProduct/OtherProduct";
-// import BeautyCare from "../../componets/beautyCare/BeautyCare";
+import ProductList from "../componets/ProductList/ProductList.jsx";
 import Footer from "../componets/footer/Footer";
 
 const Home = () => {
@@ -21,7 +21,7 @@ const Home = () => {
         {/* <Latest /> */}
         <NewestProduct />
         <OtherProduct />
-        {/* <BeautyCare /> */}
+        <ProductList />
       </div>
       <Footer />
     </div>
