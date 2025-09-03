@@ -29,7 +29,10 @@ const Navbar = (props) => {
         setMenu("Services");
         break;
       case `/reval-world-sample3/product/${props.cat}`:
-        setMenu("Services")
+        setMenu("Services");
+        break;
+      default:
+        setMenu("") 
     }
   });
   return (
