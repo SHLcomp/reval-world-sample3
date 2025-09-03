@@ -1,0 +1,33 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inconsolata:wght@200..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libertinus+Math&family=Michroma&family=Noto+Sans+Arabic:wght@100..900&family=Smooch+Sans:wght@100..900&display=swap");
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scrollbar-width: 0;
+}
+
+/* root variables */
+:root{
+  --main-color: #ee0f0f;
+  --main-color-2: #4e4d4d;
+  --main-color-3: #131313;
+  --second-color: #f9fafb;
+  --second-color-2: #b4b5b6;
+  --nav-font-family: "Josefin Sans";
+  --nav-bg: #f9fafb;
+  --landpage-title-font: "Michroma";
+  --main-font: "Michroma";
+  --font-size: 32px; /* which is 1.5 em to a h1 */
+  --ar-font: "Amiri";
+  --banner-color: rgb(212, 212, 212);
+}
+
+
+/* shared styles */
+.a{
+  color: black;
+  text-decoration: none;
+  list-style: none;
+}

@@ -1,0 +1,28 @@
+.banner {
+  background: var(--banner-color);
+  padding-block: 5px;
+  position: relative;
+  ul {
+    display: flex;
+    justify-content: space-around;
+
+    li {
+      list-style: none;
+      font-size: clamp(10px, 15px, 19px);
+
+      span {
+        color: var(--main-color);
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .banner {
+    ul {
+      li {
+        font-size: xx-small;
+      }
+    }
+  }
+}

@@ -1,0 +1,358 @@
+.nav {
+  font-size: 1.2em;
+  z-index: 1000 !important;
+  width: 100%;
+  position: absolute;
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    font-family: var(--nav-font-family);
+    font-size: clamp(14px, 1em, 20px);
+    flex-wrap: nowrap;
+    height: clamp(10px, 10vh, 60px);
+    background: var(--second-color);
+
+    .brand-txt {
+      display: flex;
+
+    }
+
+    #menuBar {
+      display: none;
+    }
+
+    h1 {
+      display: flex;
+      align-items: center;
+      font-family: var(--main-font);
+      font-size: clamp(14px, 1.1em, 20px);
+
+      span {
+        color: var(--main-color);
+      }
+
+      img {
+        width: 40px;
+      }
+
+    }
+
+    ul {
+      display: flex;
+      gap: 20px;
+      // position: absolute; //made problemsss
+
+      li {
+        list-style: none;
+        cursor: pointer;
+        transition: 0.1s;
+
+        &:hover {
+          color: var(--main-color);
+        }
+
+        &.clicked {
+          color: var(--main-color);
+
+        }
+      }
+    }
+
+    .dropdown2 {
+      position: relative;
+      //top: 100%; //made problemsss
+
+      li {
+        background: var(--second-color-2);
+        padding-inline: 10px;
+        padding-block: 10px;
+        border-radius: 20px;
+
+        &:hover {
+          color: black;
+        }
+
+        &:nth-child(1) {
+          color: white !important;
+          background: green;
+        }
+      }
+    }
+  }
+
+
+}
+
+
+
+
+
+
+
+
+// 📱 Mobile
+@media (max-width:600px) {
+  .nav {
+    z-index: 1000;
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      position: relative;
+      height: auto;
+
+      #menuBar {
+        display: block !important;
+        cursor: pointer;
+      }
+
+      .brand-txt {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px 20px;
+      }
+
+      ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+        background: var(--second-color);
+        margin: 0;
+        padding: 0;
+
+        &.show {
+          display: flex;
+          padding: 15px 20px;
+        }
+
+        li {
+          width: 100%;
+          padding: 10px 0;
+        }
+      }
+
+      .dropdown2 {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 20px; // indent so it looks nested
+        margin-top: 5px;
+        padding-bottom: 20px;
+
+        &.show2 {
+          display: flex;
+        }
+
+        li {
+          padding: 0 !important;
+
+          &:nth-child(1) {
+            color: green !important;
+            background: transparent;
+            font-weight: bold;
+          }
+
+          &:nth-child(2) {
+            background: transparent;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 💻 Tablet (600px–1024px)
+@media (min-width: 601px) and (max-width: 1025px) {
+  .nav {
+    nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 20px;
+      gap: 0 !important;
+      height: clamp(20px, 14vh, 400px);
+
+      #menuBar {
+        display: none; // full menu visible on tablet
+      }
+
+      ul {
+        display: flex;
+        gap: 15px;
+        position: relative;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+      }
+
+      .dropdown2 {
+        position: relative;
+        margin-top: 8px;
+
+        li {
+          background: var(--second-color-2);
+          padding: 8px 12px;
+          border-radius: 12px;
+          
+          &:nth-child(1) {
+            color: white !important;
+            background: green;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+// //responsive
+// @media (max-width:600px) {
+//   .nav {
+//     z-index: 1000;
+
+//     nav {
+//       display: flex;
+//       flex-direction: column;
+//       /* Keep column for stacking */
+//       align-items: center;
+//       justify-content: flex-end;
+//       text-align: center;
+//       position: relative !important;
+
+//       #menuBar {
+//         display: block !important;
+//       }
+
+//       .brand-txt {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         width: 100%;
+//         padding: 10px 20px;
+//         /* Prevent jumping */
+
+//       }
+
+//       ul {
+//         display: none;
+//         max-height: 0; // hide by default
+//         position: absolute;
+//         overflow: hidden; // prevent it from affecting layout
+
+//         &.show {
+//           display: flex;
+//           flex-direction: column;
+//           justify-content: flex-end;
+//           width: 100%;
+//           text-align: left;
+//           align-items: flex-start;
+//           padding: 15px 20px;
+//           background: var(--second-color);
+//           top: 100%;
+//           /* just below navbar */
+//           left: 0;
+//           z-index: 999;
+//           position: absolute;
+//           max-height: 500px;
+//         }
+
+//       }
+
+//       .dropdown2 {
+//         width: 100%;
+//         padding-left: 15px;
+//         position: absolute;
+//         top: 100%;
+
+//         &.show2 {
+//           display: flex;
+//           flex-direction: column;
+//           width: 100%;
+//           text-align: left;
+//           align-items: flex-start;
+//           padding: 15px 20px;
+//           background: var(--second-color);
+//           top: 100%;
+//           /* just below navbar */
+//           left: 0;
+//           z-index: 999;
+//           position: absolute;
+//           max-height: 500px;
+//         }
+
+//         li {
+
+//           background: transparent;
+//           padding: 0;
+
+//           &:nth-child(1) {
+//             color: green !important;
+//             background: transparent;
+//           }
+//         }
+//       }
+
+//     }
+//   }
+// }
+
+// // 💻 Tablet (600px–1024px)
+// @media (min-width: 601px) and (max-width: 1020px) {
+//   .nav {
+//     nav {
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: space-between;
+//       align-items: center;
+//       padding: 0px 20px;
+
+//       #menuBar {
+//         display: none; // hide hamburger on tablet, show full menu
+//       }
+
+//       ul {
+//         display: flex;
+//         gap: 15px;
+//         position: relative;
+//         justify-content: flex-end;
+//         flex-wrap: wrap; // allow wrapping if too many links
+//       }
+
+//       .dropdown2 {
+//         position: relative;
+//         padding-block: clamp(9px, 10vh, 10px);
+//         top: 100%;
+//         left: 0;
+
+//         li {
+//           background: var(--second-color-2);
+//           padding: 8px 12px;
+//           border-radius: 12px;
+
+//           &:nth-child(1) {
+//             color: white !important;
+//             background: green;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

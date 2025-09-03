@@ -1,0 +1,29 @@
+    .product{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-width: 200px;
+      max-width: 200px;
+      transition: .3s ease;
+      padding-inline: 10px;
+      cursor: pointer;
+      &:hover{
+        transform: translateY(-3px);
+      }
+      .img{
+        min-height: 200px;
+        img{
+          width: 100%;
+          min-height: 280px;
+        }
+      }
+
+      .info{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+      }
+
+
+    }

@@ -1,0 +1,119 @@
+.collections {
+  margin-top: 3cm;
+  display: grid;
+  grid-template-columns: 1fr; /* 📱 Mobile: single column */
+  grid-gap: 20px;
+  padding: 20px;
+  justify-content: space-around;
+  background: var(--second-color);
+
+  .box2 {
+    grid-column: auto;
+    grid-row: auto;
+    text-align: center; /* center text on mobile */
+  }
+
+  .box3 {
+    grid-row: auto;
+    img {
+      height: auto; /* prevent overflow on smaller screens */
+      max-height: 100%;
+    }
+  }
+
+  .box {
+    transition: 0.3s ease;
+    cursor: pointer;
+    &:hover .cta{
+      display: block;
+    }
+    &:hover {
+      opacity: 70%;
+      transform: translateY(-3px);
+    }
+  }
+
+  .collection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    .cta {
+      background: white;
+      padding-block: 5px;
+      padding-inline: 20px;
+      position: absolute;
+      display: none;
+      cursor: pointer;
+      transition: 0.5s ease;
+    }
+  }
+}
+
+
+
+@media (max-width:700px) {
+  .box{
+    cursor: auto !important;
+    &:hover {
+      opacity: 100% !important;
+      transform: translateY(-3px);
+    }
+    h3{
+      display: block !important;
+    }
+  }
+  .box2 {
+    grid-row: 1 !important;
+    grid-column: 1 !important;
+    img {
+      height: auto; /* prevent overflow on smaller screens */
+      max-height: 100%;
+    }
+  }
+}
+
+
+/* 📏 Tablet breakpoint */
+@media (max-width: 1023px) and (min-width: 690px){
+  .collections {
+    grid-template-columns: repeat(2, 1fr);
+    .box2 {
+    grid-row: 1 !important;
+    grid-column: 1 !important;
+    img {
+      height: auto; /* prevent overflow on smaller screens */
+      max-height: 100%;
+    }
+  }
+  }
+}
+
+
+
+/* 💻 Desktop breakpoint */
+@media (min-width: 1024px) {
+  .collections {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+
+    .box2 {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    .box3 {
+      grid-row: span 2;
+      img {
+        height: 100%;
+      }
+    }
+  }
+}
