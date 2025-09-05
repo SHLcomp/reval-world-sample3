@@ -22,6 +22,7 @@ const productDisplay = (props) => {
               <p>{i}</p>
             )
           })}</p>
+          <h3>Category: {product.cat}</h3>
 
           <div className="item-ctas">
             <button className="add-to-cart">Add to Cart <i class="fa-solid fa-cart-shopping"></i></button>

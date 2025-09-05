@@ -1,27 +1,34 @@
-//  import './Latest.scss';
-//  import data from '../../data/latestData';
-//  import Product from '../product/Product';
-//  const Latest = () => {
-//    return (
-//      <div className='latest'>
+import "./Latest.scss";
+import data from "../../data/avColors";
+import Product from "../product/Product";
+const Latest = () => {
+  return (
+    <div className="colors">
+      <div className="text">
+        <p>Reval Colors </p>
+        <h1>We Have 20 and more Colors</h1>
+      </div>
 
-//        <div className="text">
-//          <p>Latest Fobish Releases</p>
-//          <h1>Latest Worthwile Collections</h1>
-//        </div>
+      <div className="colors-coll">
+        {data.map((item, i) => {
+          return (
+            <div className="color">
+              <div
+                key={i}
+                className="circle"
+                style={{
+                  "--img": `url(${item.img})`,
+                  "--color": item.colorCode,
+                }}
+              ></div>
+              <h5>{i.colorName}</h5>
+            </div>
+          );
+        })}
+      </div>
+        <h4 className="cta">View All</h4>
+    </div>
+  );
+};
 
-//      <div className="latest-coll">
-
-//      {data.map((item,i) =>{
-//        return (
-//          <Product key={i} img={item.img} title={item.title} price={item.price}/>
-//        )
-//      })}
-
-//      </div>
-
-//      </div>
-//    )
-//  }
-
-//  export default Latest
+export default Latest;

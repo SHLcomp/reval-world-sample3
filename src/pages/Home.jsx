@@ -3,7 +3,7 @@ import Hero from "../componets/hero/Hero";
 import Features from "../componets/features/Features";
 import Banner from "../componets/banner/Banner";
 import Collection from "../componets/collection/Collection";
-// import Latest from "../../componets/latest/Latest";
+import Latest from "../componets/latest/Latest";
 import NewestProduct from "../componets/newestProduct/NewestProduct";
 import OtherProduct from "../componets/otherProduct/OtherProduct";
 import ProductList from "../componets/ProductList/ProductList.jsx";
@@ -18,7 +18,7 @@ const Home = () => {
         <Hero />
         <Features />
         <Collection />
-        {/* <Latest /> */}
+        <Latest />
         <NewestProduct />
         <OtherProduct />
         <ProductList />

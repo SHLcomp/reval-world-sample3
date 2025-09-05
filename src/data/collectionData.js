@@ -12,7 +12,7 @@ const collection = [
         cat: "door"
     },
     {
-        name: "Automatic Windows",
+        name: "Aluminum Windows",
         path: "/autoDoors",
         img: img1,
         className: "box3",
@@ -20,21 +20,21 @@ const collection = [
         
     },
     {
-        name: "Aluminum Windows",
+        name: "Shatter Rolls",
         path: "/autoDoors",
         img: img3,
         className: "box",
         cat: "window"
     },
     {
-        name: "Automatic Doors",
+        name: "Iron Gates",
         path: "/autoDoors",
         img: img4,
         className: "box",
         cat: "door"
     },
     {
-        name: "Automatic Doors",
+        name: "Rolling Doors",
         path: "/autoDoors",
         img: img2,
         className: "box",
