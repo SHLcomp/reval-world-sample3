@@ -1,0 +1,31 @@
+.allP{
+    padding-top: 3cm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    .products{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 60%;
+        height: 100%;
+        float: left;
+        margin-top: clamp(1cm, 1vw, 3cm);
+
+    }
+    .filter{
+        float: right;
+    }
+}
+
+@media (max-width:600px) {
+    .allP{
+        .products{
+            width: 100%;
+        }
+    }
+}

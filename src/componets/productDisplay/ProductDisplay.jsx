@@ -16,7 +16,6 @@ const productDisplay = (props) => {
             
           <h1>{product.realName}</h1>
           <p>{product.displayName}</p>
-          <h4>${product.price}</h4>
           <p>{product.des.map((i)=>{
             return (
               <p>{i}</p>
@@ -24,9 +23,9 @@ const productDisplay = (props) => {
           })}</p>
           <h3>Category: {product.cat}</h3>
 
-          <div className="item-ctas">
+          {/* <div className="item-ctas">
             <button className="add-to-cart">Add to Cart <i class="fa-solid fa-cart-shopping"></i></button>
-          </div>
+          </div> */}
 
           </div>
         </div>

@@ -6,13 +6,13 @@ import { useEffect, useState } from "react";
 
 const Navbar = (props) => {
   const [menu, setMenu] = useState("Home");
-  const [respoMenu, setRespoMenu] = useState(false)
+  const [respoMenu, setRespoMenu] = useState(false);
 
   const locate = useLocation();
 
-  const toggleMenu = ()=>{
+  const toggleMenu = () => {
     setRespoMenu((prev) => !prev);
-  }
+  };
 
   useEffect(() => {
     switch (locate.pathname) {
@@ -22,38 +22,44 @@ const Navbar = (props) => {
       case "/reval-world-sample3/upvc":
         setMenu("UPVC");
         break;
-      case '/reval-world-sample3/epd':
+      case "/reval-world-sample3/epd":
         setMenu("Projects");
         break;
-      case '/reval-world-sample3/services':
+      case "/reval-world-sample3/services":
         setMenu("Services");
         break;
       case `/reval-world-sample3/product/${props.cat}`:
         setMenu("Services");
         break;
       default:
-        setMenu("") 
+        setMenu("");
     }
   });
   return (
     <div className="nav">
       <nav>
-
         <div className="brand-txt">
-        <h1 className="brand-title">
-          {" "}
-          <img src={logo} alt="" /> <span>Reval </span>World
-        </h1>
-        <i className={`fa-solid ${respoMenu ? "fa-xmark" : "fa-bars"}`} id="menuBar" onClick={toggleMenu}></i>
+          <h1 className="brand-title">
+            {" "}
+            <img src={logo} alt="" /> <span>Reval </span>World
+          </h1>
+          <i
+            className={`fa-solid ${respoMenu ? "fa-xmark" : "fa-bars"}`}
+            id="menuBar"
+            onClick={toggleMenu}
+          ></i>
         </div>
-
 
         <ul className={`{ ${respoMenu ? "show" : ""} }`}>
           <Link className="a" to={"/reval-world-sample3/"}>
             <li className={menu === "Home" ? "clicked" : ""}>Home</li>
           </Link>
-          <Link className="a" to='/reval-world-sample3/upvc'><li className={menu === "UPVC" ? "clicked" : ""}>UPVC</li></Link>
-          <Link className="a" to='/reval-world-sample3/services'><li className={menu === "Services" ? "clicked" : ""}>Services</li></Link>
+          <Link className="a" to="/reval-world-sample3/upvc">
+            <li className={menu === "UPVC" ? "clicked" : ""}>UPVC</li>
+          </Link>
+          <Link className="a" to="/reval-world-sample3/services">
+            <li className={menu === "Services" ? "clicked" : ""}>Services</li>
+          </Link>
           <li className={menu === "Projects" ? "clicked" : ""}>Projects</li>
           <li className={menu === "Colors" ? "clicked" : ""}>Colors</li>
           <li className={menu === "Deals" ? "clicked" : ""}>Deals</li>
@@ -62,14 +68,19 @@ const Navbar = (props) => {
         </ul>
 
         <ul className={`dropdown2 ${respoMenu ? "show2" : ""}`}>
-          <li>
+          <a
+              href="https://wa.me/1234567890?text=Hello%20there!"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="a"
+            ><li>
+            
             <i className="fa-brands fa-whatsapp"></i>Whatsapp
-          </li>
+          </li></a>
           <li>
             <i className="fa-solid fa-phone"></i>+966 123456789
           </li>
         </ul>
-
       </nav>
     </div>
   );

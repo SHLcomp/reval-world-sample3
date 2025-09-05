@@ -6,6 +6,7 @@ import Upvc from "./pages/Upvc.jsx";
 import Services from "./pages/Services.jsx";
 import ProductFilter from "./componets/poductFilter/ProductFilter.jsx";
 import { AllCat } from "./componets/allCat/AllCat.jsx";
+import { AllProducts } from "./pages/AllProducts.jsx";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
   {
     path:'/reval-world-sample3/product/window',
     element: <AllCat cat="window"/>
+  },
+  {
+    path: "/reval-world-sample3/allproducts",
+    element: <AllProducts />
   }
 ]);
 

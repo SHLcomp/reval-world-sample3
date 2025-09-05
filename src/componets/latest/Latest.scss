@@ -67,3 +67,21 @@
     margin-top: clamp(2cm, 30vh, 10cm);
   }
 }
+
+@media (max-width:600px) {
+  .colors {
+    display: flex;
+    flex-direction: column;
+
+    .text {
+      width: 100%;
+    }
+
+    .colors-coll {
+      width: 100%;
+      flex-wrap: wrap;
+      overflow-y: visible;
+      cursor: auto;
+    }
+  }
+}

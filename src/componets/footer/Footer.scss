@@ -1,68 +1,107 @@
 .footer {
-    background: var(--footer-bg);
-    color: white;
-    padding: 30px;
-    margin-top: clamp(2cm, 2vw, 3cm);
-    width: 100%;
-    height: clamp(200px, 40vh, 500px);
-    display: flex;
-    justify-content: center;
-    h2{
-        font-family: var(--main-font) !important;
-        span{
-            color: var(--main-color);
-        }
+  background: var(--footer-bg);
+  color: white;
+  padding: 30px;
+  margin-top: clamp(2cm, 2vw, 3cm);
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+
+  h2 {
+    font-family: var(--main-font) !important;
+    text-align: center;
+
+    span {
+      color: var(--main-color);
     }
-    .grid{
+  }
+
+  .grid {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    .txt{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        // gap: clmap(5px, 10px, 30px);
-        gap: 10px;
-    img{
-        width: 3vw;
+    width: 100%;
+
+    .txt {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: clamp(20px, 5vw, 40px); // scales better
+      }
     }
+
+    h5 {
+      display: flex;
+      gap: 10px;
+
+      img {
+        width: clamp(15px, 3vw, 25px);
+      }
     }
-    h5{
-        display: flex;
-        gap: 10px;
-        img{
-            width: 1vw;
-        }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: clamp(10px, 5vw, 40px);
+      width: 100%;
     }
-        main {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(1, 1fr);
-        // justify-content: space-around;
-        grid-gap:clamp(2vw,  20vw, 90vw);
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: clamp(0.9em, 1.1vw, 1.2em);
+
+    li {
+      cursor: pointer;
+      max-width: fit-content;
+      transition: 0.2s;
+
+      &:hover {
+        color: white;
+        transform: translateX(10px);
+      }
     }
+  }
+
+  /* 📱 Mobile */
+  @media (max-width: 768px) {
+    .grid {
+      main {
+        grid-template-columns: 1fr 1fr 1fr; // stack
+        text-align: center;
+      }
     }
 
     ul {
-        grid-column: auto;
-        grid-row: auto;
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        font-size: 1.1em;
-        li{
-            cursor: pointer;
-            max-width: fit-content;
-            transition: .2s;
-            &:hover{
-                color: white;
-                transform: translateX(20px);
-            }
-        }
-
+      align-items: center;
     }
+  }
+
+  /* 💻 Tablets */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .grid {
+      main {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+
+  /* 🖥️ Large Screens */
+  @media (min-width: 1025px) {
+    .grid {
+      main {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
 }

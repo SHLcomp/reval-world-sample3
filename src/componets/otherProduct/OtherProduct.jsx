@@ -35,7 +35,7 @@ const OtherProduct = () => {
             <li>Modern Look</li>
             <li>Property Value</li>
           </ul>
-        <Link className="a" to='/reval-world-sample3/upvc'><h4 className="cta">View</h4></Link>
+        <Link className="a" to='/reval-world-sample3/upvc'><h4 className="cta">Read More</h4></Link>
         </div>
 
       </div>

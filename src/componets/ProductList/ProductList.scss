@@ -1,4 +1,4 @@
-.beautyP{
+.beautyP {
   margin-top: 3cm;
   display: flex;
   flex-direction: column;
@@ -6,12 +6,30 @@
   justify-content: center;
   width: 100%;
 
-  .products{
+  .products {
+    padding-block: 20px;
     display: flex;
-    overflow: scroll;
-    max-width: 80%;
+    overflow: auto;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: clamp(100px, 70%, 100%);
+    height: clamp(90px, 20vw, 100vw);
     margin-top: 20px;
     align-items: center;
 
+  }
+}
+
+@media (max-width:600px) {
+  .beautyP {
+    .products {
+      max-width: 100% !important;
+      height: clamp(60vh, 100vw, 200vw);
+      overflow: visible;
+    }
   }
 }
