@@ -58,6 +58,8 @@
     list-style: none;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
     font-size: clamp(0.9em, 1.1vw, 1.2em);
 
@@ -73,6 +75,7 @@
     }
   }
 
+
   /* 📱 Mobile */
   @media (max-width: 768px) {
     .grid {
@@ -84,24 +87,6 @@
 
     ul {
       align-items: center;
-    }
-  }
-
-  /* 💻 Tablets */
-  @media (min-width: 769px) and (max-width: 1024px) {
-    .grid {
-      main {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-  }
-
-  /* 🖥️ Large Screens */
-  @media (min-width: 1025px) {
-    .grid {
-      main {
-        grid-template-columns: repeat(3, 1fr);
-      }
     }
   }
 }

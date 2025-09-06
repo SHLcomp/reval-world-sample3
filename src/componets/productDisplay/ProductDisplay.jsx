@@ -1,3 +1,4 @@
+import Footerr from '../footer/Footer';
 import './ProductDisplay.scss';
 const productDisplay = (props) => {
   const {product} = props;
@@ -18,14 +19,16 @@ const productDisplay = (props) => {
           <p>{product.des}</p>
           <h3>Category: {product.cat}</h3>
 
-          {/* <div className="item-ctas">
-            <button className="add-to-cart">Add to Cart <i class="fa-solid fa-cart-shopping"></i></button>
-          </div> */}
+          <div className="item-ctas">
+            <button>Read More <i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
 
           </div>
         </div>
         
       </div>
+
+      <Footerr />
     </div>
   )
 }

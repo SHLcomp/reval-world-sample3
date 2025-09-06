@@ -1,87 +1,120 @@
 .colors {
   display: flex;
-  padding-inline: 30px;
-  margin-top: 3cm;
+  flex-direction: column;
+  justify-content: center;
   gap: 20px;
+  padding-inline: 30px;
+  position: relative;
 
-  .text {
-    float: right;
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .cta {
+    position: absolute;
+    left: 50%;
   }
 
-  .colors-coll {
-    width: 80%;
+  .colors-horizontal {
     display: flex;
+    padding-inline: 30px;
+    margin-top: 3cm;
     gap: 20px;
-    flex-wrap: nowrap;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    padding-block: 10px;
-    position: relative;
 
-    .color {
+    .text {
+      float: right;
+      width: 20%;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
-      gap: 10px;
-      font-size: 1.2em;
-      // background: var(--second-color);
-      padding: 5px;
-
-      .circle {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        background-image: var(--img);
-        background-size: cover;
-        background-position: center;
-        transition: 0.3s ease;
-        position: relative;
-        overflow: hidden;
-
-        &::before {
-          content: '';
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          background-color: var(--color);
-          right: 150px;
-          transition: .5s;
-          transform: rotate(45deg);
-          box-shadow: 2px 2px 5px;
-        }
-
-        &:hover::before {
-          right: 0;
-        }
-      }
     }
 
+    .colors-coll {
+      width: 80%;
+      display: flex;
+      gap: 20px;
+      flex-wrap: nowrap;
+      overflow-y: scroll;
+      scroll-behavior: smooth;
+      padding-block: 10px;
+      position: relative;
+
+      .color {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.2em;
+        // background: var(--second-color);
+        padding: 5px;
+
+        .circle {
+          width: clamp(90px, 20vw, 150px);
+          height: clamp(90px, 20vw, 150px);
+          border-radius: 50%;
+          background-image: var(--img);
+          background-size: cover;
+          background-position: center;
+          transition: 0.3s ease;
+          position: relative;
+          overflow: hidden;
+
+          &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color);
+            right: 150px;
+            transition: .5s;
+            transform: rotate(45deg);
+            box-shadow: 2px 2px 5px;
+          }
+
+          &:hover::before {
+            right: 0;
+          }
+        }
+      }
+
+    }
   }
 
-  h4 {
-    margin-top: clamp(2cm, 30vh, 10cm);
-  }
 }
 
 @media (max-width:600px) {
   .colors {
-    display: flex;
-    flex-direction: column;
-
-    .text {
+    padding-inline: 0;
+    width: 100% !important;
+    .cta{
+      left: clamp(30%, 40%, 50%);
+    }
+    .colors-horizontal {
       width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .text {
+        width: 100%;
+      }
+
+      .colors-coll {        
+        width: 100% !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow-y: visible;
+        cursor: auto;
+        .color{
+          .circle{
+            &::before {
+            right: clamp(60px, 2vw, 70px);
+          }
+
+          &:hover::before {
+            right: 0;
+          }
+          }
+        }
+      }
     }
 
-    .colors-coll {
-      width: 100%;
-      flex-wrap: wrap;
-      overflow-y: visible;
-      cursor: auto;
-    }
+
   }
 }

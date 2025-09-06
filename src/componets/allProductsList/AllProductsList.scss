@@ -1,15 +1,25 @@
 .allP{
-    padding-top: 3cm;
+    padding-top: 3cm !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: clamp(300px, 100vh, 800px);
+    padding-bottom: clamp(30px, 10vh, 20vh);
     align-items: center;
-    gap: 20px;
+    gap: 10px;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        top: 100%;
+        width: 70%;
+        height: 2px;
+        background: #000;
+    }
     .products{
         display: flex;
         justify-content: center;
         gap: 30px;
-        align-items: center;
         flex-wrap: wrap;
         width: 60%;
         height: 100%;
@@ -17,9 +27,7 @@
         margin-top: clamp(1cm, 1vw, 3cm);
 
     }
-    .filter{
-        float: right;
-    }
+    
 }
 
 @media (max-width:600px) {
