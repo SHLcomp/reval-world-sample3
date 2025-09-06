@@ -1,4 +1,4 @@
-.allP{
+.allP {
     padding-top: 3cm !important;
     display: flex;
     flex-direction: column;
@@ -8,15 +8,19 @@
     align-items: center;
     gap: 10px;
     position: relative;
-    &::after{
+
+    &::after {
         content: '';
         position: absolute;
-        top: 100%;
+        bottom: 0%; // relative to container height
+        left: 50%;
+        transform: translateX(-50%);
         width: 70%;
         height: 2px;
         background: #000;
     }
-    .products{
+
+    .products {
         display: flex;
         justify-content: center;
         gap: 30px;
@@ -27,12 +31,24 @@
         margin-top: clamp(1cm, 1vw, 3cm);
 
     }
-    
+
 }
 
 @media (max-width:600px) {
-    .allP{
-        .products{
+    .allP {
+
+        height: clamp(300px, 120vh, 800px);
+        padding-bottom: clamp(30px, 10vh, 70vh);
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     top: clamp(300px, 110vh, 110%); //here
+        //     width: 70%;
+        //     height: 2px;
+        //     background: #000;
+        // }
+
+        .products {
             width: 100%;
         }
     }
