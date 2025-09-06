@@ -6,8 +6,8 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const BeautyCare = () => {
-  // Take only the first 4 items
-  const limitedData = data.slice(0, 4);
+  // Take only 4 items
+  const limitedData = data.slice(3, 7);
 
   const [items, setItems] = useState(limitedData);
 

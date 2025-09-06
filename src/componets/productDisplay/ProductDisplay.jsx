@@ -10,17 +10,12 @@ const productDisplay = (props) => {
           <div className="img-info"></div>
         </div>
 
-
         <div className="right">
           <div className="item-info">
             
           <h1>{product.realName}</h1>
           <p>{product.displayName}</p>
-          <p>{product.des.map((i)=>{
-            return (
-              <p>{i}</p>
-            )
-          })}</p>
+          <p>{product.des}</p>
           <h3>Category: {product.cat}</h3>
 
           {/* <div className="item-ctas">

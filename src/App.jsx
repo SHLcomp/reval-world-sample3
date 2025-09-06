@@ -38,7 +38,7 @@ const router = createBrowserRouter([
   },
   {
     path:'/reval-world-sample3/product/door',
-    element: <AllCat cat="door"/>
+    element: <AllCat cat="sliding systems"/>
   },
   {
     path:'/reval-world-sample3/product/window',
