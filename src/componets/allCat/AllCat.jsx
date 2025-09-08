@@ -1,5 +1,5 @@
 import React from "react";
-import productsData from "../../data/ProductsData";
+import productsData from "../../data/productsData";
 import Product from "../product/Product";
 import Navbar from "../navbar/Navbar";
 import './AllCat.scss';
