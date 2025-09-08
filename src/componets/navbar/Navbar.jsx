@@ -61,7 +61,6 @@ const Navbar = (props) => {
             <li className={menu === "Services" ? "clicked" : ""}>Services</li>
           </Link>
           <li className={menu === "Projects" ? "clicked" : ""}>Projects</li>
-          <li className={menu === "Colors" ? "clicked" : ""}>Colors</li>
           <li className={menu === "Deals" ? "clicked" : ""}>Deals</li>
           <li className={menu === "Contact" ? "clicked" : ""}>Contact</li>
           <li className={menu === "About Us" ? "clicked" : ""}>About Us</li>
