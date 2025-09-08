@@ -172,47 +172,101 @@
 }
 
 // 💻 Tablet (600px–1024px)
-@media (min-width: 601px) and (max-width: 1025px) {
+@media (min-width: 601px) and (max-width: 1024px) {
   .nav {
+    overflow: hidden;
     nav {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;       // stay horizontal
       justify-content: space-around;
       align-items: center;
-      padding: 10px 20px;
-      gap: 0 !important;
-      height: clamp(20px, 14vh, 400px);
+      padding: 10px 30px;
+      height: clamp(50px, 12vh, 80px);
 
       #menuBar {
-        display: none; // full menu visible on tablet
+        display: none; // hide hamburger on tablet
+      }
+
+      .brand-txt {
+        flex: 0 0 auto;          // keep brand fixed size
+        display: flex;
+        align-items: center;
+
+        h1 {
+          font-size: clamp(16px, 1vw, 10px);
+        }
       }
 
       ul {
+        flex: 1;                 // push ul to the right
         display: flex;
-        gap: 15px;
-        position: relative;
         justify-content: flex-end;
-        flex-wrap: wrap;
-      }
-
-      .dropdown2 {
-        position: relative;
-        margin-top: 8px;
+        align-items: center;
+        // gap: clamp(5px, .2vw, 10px);
+        gap: 0 !important;
+        margin: 0;
+        padding: 0;
+        list-style: none;
 
         li {
-          background: var(--second-color-2);
-          padding: 8px 12px;
-          border-radius: 12px;
-          
+          font-size: clamp(14px, .8em, 18px);
+          padding: 6px 10px;
+          border-radius: 8px;
+          transition: background 0.2s;
+
+          &:hover {
+            background: var(--second-color-2);
+          }
+
+          &.clicked {
+            color: var(--main-color);
+          }
+        }
+      }
+
+      // dropdowns appear directly below their parent li
+      .dropdown2 {
+        position: absolute;
+        top: 100%;
+        left: auto;
+        right: 0;
+        margin-top: 8px;
+        display: none; // hidden by default
+        flex-direction: column;
+        background: var(--second-color);
+        padding: 8px 0;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+
+        li {
+          background: transparent;
+          padding: 8px 16px;
+          border-radius: 0;
+          text-align: left;
+          white-space: nowrap;
+
+          &:hover {
+            background: var(--second-color-2);
+            color: black;
+          }
+
           &:nth-child(1) {
             color: white !important;
             background: green;
+            border-radius: 6px;
           }
         }
+      }
+
+      // show dropdown on hover (tablet/desktop behavior)
+      ul li:hover > .dropdown2 {
+        display: flex;
       }
     }
   }
 }
+
+
 
 
 
