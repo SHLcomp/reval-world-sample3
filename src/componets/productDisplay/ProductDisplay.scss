@@ -86,3 +86,52 @@
     }
   }
 }
+
+
+// 💻 Tablet (601px–1024px)
+@media (min-width: 601px) and (max-width: 1024px) {
+  .all-products {
+    padding-top: clamp(15px, 10vh, 90px);
+
+    .chosen-item {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding-block: 20px;
+      gap: 20px;
+
+      .left {
+        width: 45%; // ✅ slightly bigger for readability
+        img {
+          width: 100%;      // scale with container
+          max-width: 300px; // prevent overflow
+          height: auto;
+        }
+      }
+
+      .right {
+        width: 55%;
+        padding-inline: 15px;
+
+        .item-info {
+          gap: 15px;
+          h1 {
+            font-size: clamp(18px, 2.5vw, 24px);
+          }
+          h4 {
+            font-size: clamp(14px, 2vw, 18px);
+          }
+        }
+
+        .item-ctas {
+          flex-wrap: wrap; // ✅ buttons wrap if needed
+          gap: 12px;
+          button {
+            font-size: 1em;
+            padding: 8px 16px;
+          }
+        }
+      }
+    }
+  }
+}

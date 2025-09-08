@@ -53,3 +53,28 @@
         }
     }
 }
+
+// 💻 Tablet (601px–1024px)
+@media (min-width: 601px) and (max-width: 1024px) {
+    .allP {
+        padding-top: 2cm;
+        padding-bottom: clamp(20px, 8vh, 60px);
+        height: auto; // let content decide height
+
+        .products {
+            width: 90%; // ✅ take more space on tablets
+            gap: 20px; // ✅ slightly smaller gap
+            justify-content: center;
+            height: clamp(10px, 100vh, 800px);
+        }
+
+        .filter {
+            width: 90%; // ✅ make filter align with products
+            margin-bottom: 20px; // spacing from products
+        }
+
+        &::after {
+            width: 85%; // line matches wider layout
+        }
+    }
+}

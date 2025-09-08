@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   gap: 20px;
   padding-inline: 30px;
-  margin-top: clamp(10px, 30vh, 200px);
+  margin-top: clamp(10px, 20vh, 90px);
 
   .feature {
     display: flex;
@@ -59,6 +59,27 @@
         height: clamp(10px, 10vw, 100px);
         max-width: 100px;
         min-width: 100px;
+      }
+    }
+  }
+}
+
+/* 💻 Tablet / Medium screens */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .features {
+    margin-top: clamp(10px, 10vh, 100px) !important;  // ✅ smaller top margin
+    padding-inline: 20px;
+    gap: 15px;
+    
+
+    .feature {
+      img {
+        width: clamp(80px, 20vw, 100px);
+        height: clamp(80px, 20vw, 100px);
+      }
+
+      ul {
+        max-width: clamp(80px, 25vw, 30vw);
       }
     }
   }
