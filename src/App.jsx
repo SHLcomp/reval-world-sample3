@@ -10,24 +10,24 @@ import { AllProducts } from "./pages/AllProducts.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/reval-world-sample3/",
+    path: "/",
     element: <Home />,
     errorElement: <h1>Sorry, 404</h1>,
   },
   {
-    path: "/reval-world-sample3/epd",
+    path: "/epd",
     element: <Epd />,
   },
   {
-    path: "/reval-world-sample3/upvc",
+    path: "/upvc",
     element: <Upvc />,
   },
   {
-    path: "/reval-world-sample3/services",
+    path: "/services",
     element: <Services />,
   },
   {
-    path: "/reval-world-sample3/product/",
+    path: "/product/",
     element: <ProductFilter />,
     children: [
       {
@@ -37,15 +37,15 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path:'/reval-world-sample3/product/door',
+    path:'/product/door',
     element: <AllCat cat="sliding systems"/>
   },
   {
-    path:'/reval-world-sample3/product/window',
+    path:'/product/window',
     element: <AllCat cat="window"/>
   },
   {
-    path: "/reval-world-sample3/allproducts",
+    path: "/allproducts",
     element: <AllProducts />
   }
 ]);

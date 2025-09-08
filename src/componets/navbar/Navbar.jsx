@@ -16,19 +16,19 @@ const Navbar = (props) => {
 
   useEffect(() => {
     switch (locate.pathname) {
-      case "/reval-world-sample3/":
+      case "/":
         setMenu("Home");
         break;
-      case "/reval-world-sample3/upvc":
+      case "/upvc":
         setMenu("UPVC");
         break;
-      case "/reval-world-sample3/epd":
+      case "/epd":
         setMenu("Projects");
         break;
-      case "/reval-world-sample3/services":
+      case "/services":
         setMenu("Services");
         break;
-      case `/reval-world-sample3/product/${props.cat}`:
+      case `/product/${props.cat}`:
         setMenu("Services");
         break;
       default:
@@ -51,13 +51,13 @@ const Navbar = (props) => {
         </div>
 
         <ul className={`{ ${respoMenu ? "show" : ""} }`}>
-          <Link className="a" to={"/reval-world-sample3/"}>
+          <Link className="a" to={"/"}>
             <li className={menu === "Home" ? "clicked" : ""}>Home</li>
           </Link>
-          <Link className="a" to="/reval-world-sample3/upvc">
+          <Link className="a" to="/upvc">
             <li className={menu === "UPVC" ? "clicked" : ""}>UPVC</li>
           </Link>
-          <Link className="a" to="/reval-world-sample3/services">
+          <Link className="a" to="/services">
             <li className={menu === "Services" ? "clicked" : ""}>Services</li>
           </Link>
           <li className={menu === "Projects" ? "clicked" : ""}>Projects</li>
