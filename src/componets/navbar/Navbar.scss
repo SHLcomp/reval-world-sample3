@@ -222,7 +222,7 @@
           transition: background 0.2s;
 
           &:hover {
-            background: var(--second-color-2);
+            color: var(--main-color);
           }
 
           &.clicked {
