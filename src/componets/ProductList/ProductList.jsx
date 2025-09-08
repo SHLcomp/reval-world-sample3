@@ -42,7 +42,7 @@ const BeautyCare = () => {
         ))}
       </div>
 
-      <Link className='a' to='/reval-world-sample3/allproducts'>
+      <Link className='a' to='/allproducts'>
         <h4 className="cta">View All</h4>
       </Link>
     </div>
