@@ -5,7 +5,7 @@ const Product = (item) => {
   return (
     <div className="product">
           <div className="img">
-            <Link to={`/reval-world-sample3/product/${item.id}`} className='a'><img src={item.img} alt="" /></Link>
+            <Link to={`/product/${item.id}`} className='a'><img src={item.img} alt="" /></Link>
           </div>
           <div className="info">
             <h3>{item.displayName}</h3>
